@@ -22,11 +22,18 @@ fi
 stow config-files -t ~
 
 if [[ -z $(git config --global user.name) ]]; then
-	read -r -p "Enter your git name:" GIT_NAME 
-	git config --global user.name "$GIT_NAME"
+	read -r -p "Do you want to setup git (y/n):" GIT_SETUP
+	if [[ $GIT_SETUP == "y" ]]; then
+		read -r -p "Enter your git name:" GIT_NAME
+		git config --global user.name "$GIT_NAME"
 
-	read -r -p "Enter your git email:" GIT_EMAIL
-	git config --global user.email "$GIT_EMAIL"
+		read -r -p "Enter your git email:" GIT_EMAIL
+		git config --global user.email "$GIT_EMAIL"
+
+		ssh-keygen -t ed25519 -C "$GIT_EMAIL"
+		clip.exe < ~/.ssh/id_ed25519.pub
+		echo "Paste the ssh copied to the clipboard in you GITHUB account"
+	fi
 fi
 
 
