@@ -1,0 +1,26 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-format = true
+true-color = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal]
+C-s = ":w!"
+C-w = ":buffer-close"
+y = [":clipboard-yank", "yank"]
+
+[keys.insert]
+C-s = [":w!", "normal_mode"]
+C-w = [":buffer-close", "normal_mode"]
+
+[keys.select]
+y = [":clipboard-yank", "yank"]
