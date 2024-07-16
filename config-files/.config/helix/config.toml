@@ -6,6 +6,9 @@ mouse = false
 auto-format = true
 true-color = true
 
+[editor.file-picker]
+hidden = false
+
 [editor.indent-guides]
 render = true
 skip-levels = 1

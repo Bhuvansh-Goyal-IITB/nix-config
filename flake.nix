@@ -21,6 +21,8 @@
               nixpkgs-fmt
               nil
               zsh
+              zsh-autosuggestions
+              zsh-syntax-highlighting
               zellij
               stow
               starship
@@ -36,6 +38,7 @@
           default = pkgs.mkShell {
             buildInputs = with pkgs; [
               taplo
+              lua-language-server
               nodePackages_latest.bash-language-server
             ];
           };

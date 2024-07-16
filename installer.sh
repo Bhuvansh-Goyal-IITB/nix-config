@@ -11,15 +11,19 @@ if [[ $SHELL != *"zsh" ]]; then
 	chsh -s "$(which zsh)"
 fi
 
-read -r -p "Do you want to backup your config file (y/n):" BACKUP
-if [[ $BACKUP == "y" ]]; then
-	mv ~/.config ~/.config.bak
-else 
-	rm -rf ~/.config 
-	rm -rf ~/.config.bak
+
+if [[ "$(readlink ~/.config)" != *"/config-files/.config" ]]; then
+	read -r -p "Do you want to backup your config file (y/n):" BACKUP
+	if [[ $BACKUP == "y" ]]; then
+		mv ~/.config ~/.config.bak
+	else 
+		rm -rf ~/.config 
+		rm -rf ~/.config.bak
+	fi
 fi
 
-stow config-files -t ~
+stow --adopt config-files -t ~
+git --reset hard
 
 if [[ -z $(git config --global user.name) ]]; then
 	read -r -p "Do you want to setup git (y/n):" GIT_SETUP
@@ -35,5 +39,3 @@ if [[ -z $(git config --global user.name) ]]; then
 		echo "Paste the ssh copied to the clipboard in you GITHUB account"
 	fi
 fi
-
-
