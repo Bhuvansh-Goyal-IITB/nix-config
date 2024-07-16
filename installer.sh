@@ -11,7 +11,6 @@ if [[ $SHELL != *"zsh" ]]; then
 	chsh -s "$(which zsh)"
 fi
 
-
 if [[ "$(readlink ~/.config)" != *"/config-files/.config" ]]; then
 	read -r -p "Do you want to backup your config file (y/n):" BACKUP
 	if [[ $BACKUP == "y" ]]; then
@@ -23,7 +22,7 @@ if [[ "$(readlink ~/.config)" != *"/config-files/.config" ]]; then
 fi
 
 stow --adopt config-files -t ~
-git reset --hard
+git reset --hard &> /dev/null
 
 if [[ -z $(git config --global user.name) ]]; then
 	read -r -p "Do you want to setup git (y/n):" GIT_SETUP
