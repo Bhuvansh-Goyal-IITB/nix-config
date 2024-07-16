@@ -16,6 +16,8 @@ eval "$(direnv hook zsh)"
 # Zsh setup
 source "$HOME/.nix-profile/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+autoload -U compinit; compinit
+source "$HOME/.nix-profile/share/fzf-tab/fzf-tab.plugin.zsh"
 
 # Zellij starter script
 ZJ_SESSIONS=$(zellij ls -n -s)
