@@ -23,6 +23,7 @@
               zsh
               zsh-autosuggestions
               zsh-syntax-highlighting
+              zsh-fzf-tab
               zellij
               stow
               starship
