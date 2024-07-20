@@ -54,3 +54,7 @@ fi
 if ! command -v ulauncher &> /dev/null; then
 	sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher
 fi
+
+if ! command -v zed &> /dev/null; then
+	curl -f https://zed.dev/install.sh | sh
+fi
