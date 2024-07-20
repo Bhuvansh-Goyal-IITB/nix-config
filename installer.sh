@@ -48,6 +48,10 @@ fi
 gnome-extensions enable space-bar@luchrioh
 gnome-extensions enable tactile@lundal.io
 
+if [ ! -f "/usr/share/glib-2.0/schemas/org.gnome.shell.extensions.tactile.gschema.xml" ]; then
+	sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
+fi
+
 gsettings set org.gnome.shell.extensions.tactile col-0 1
 gsettings set org.gnome.shell.extensions.tactile col-1 2
 gsettings set org.gnome.shell.extensions.tactile col-2 1
