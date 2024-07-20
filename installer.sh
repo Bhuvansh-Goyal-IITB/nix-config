@@ -58,5 +58,3 @@ fi
 if ! command -v zed &> /dev/null; then
 	curl -f https://zed.dev/install.sh | sh
 fi
-
-gsettings set org.gnome.desktop.background picture-uri "file://$(pwd)/wallpaper.png"
