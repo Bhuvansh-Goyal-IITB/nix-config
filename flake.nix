@@ -38,6 +38,9 @@
               })
               gnomeExtensions.space-bar
               gnomeExtensions.tactile
+              gnomeExtensions.just-perfection
+              gnomeExtensions.blur-my-shell
+              ulauncher
             ];
           };
         };
