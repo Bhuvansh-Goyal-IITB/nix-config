@@ -45,7 +45,6 @@ if ! command -v gnome-extensions &> /dev/null; then
 	sudo apt install gnome-shell-extensions
 fi
 
-gnome-extensions enable space-bar@luchrioh
 gnome-extensions enable tactile@lundal.io
 
 if ! command -v spotify &> /dev/null; then

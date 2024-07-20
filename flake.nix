@@ -36,7 +36,6 @@
                   "JetBrainsMono"
                 ];
               })
-              gnomeExtensions.space-bar
               gnomeExtensions.tactile
             ];
           };

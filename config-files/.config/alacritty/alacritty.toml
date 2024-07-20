@@ -2,7 +2,7 @@
 padding = { x = 12, y = 12 }
 dynamic_padding = true
 title = "Alacritty"
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 opacity = 0.9
 
 [font]
