@@ -47,7 +47,7 @@ fi
 
 gnome-extensions enable space-bar@luchrioh
 gnome-extensions enable tactile@lundal.io
-gnome-extensions enable blur-my-shell@aunetx
-gnome-extensions enable just-perfection-desktop@just-perfection
 
-
+if ! command -v spotify &> dev/null; then
+	sudo snap install spotify
+fi
