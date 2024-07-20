@@ -36,6 +36,7 @@
                   "JetBrainsMono"
                 ];
               })
+              gnomeExtensions.space-bar
             ];
           };
         };
