@@ -38,6 +38,7 @@
               })
               gnomeExtensions.space-bar
               gnomeExtensions.tactile
+              gnomeExtensions.rounded-window-corners
             ];
           };
         };
