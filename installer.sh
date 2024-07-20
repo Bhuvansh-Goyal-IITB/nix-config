@@ -46,3 +46,4 @@ if ! command -v gnome-extensions &> /dev/null; then
 fi
 
 gnome-extensions enable space-bar@luchrioh
+gnome-extensions enable tactile@lundal.io
