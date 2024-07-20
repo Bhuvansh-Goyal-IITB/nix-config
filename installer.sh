@@ -32,3 +32,9 @@ fi
 if ! command -v alacritty &> /dev/null; then
 	sudo snap install alacritty --classic
 fi
+
+if ! command -v gnome-extensions &> /dev/null; then
+	sudo apt install gnome-shell-extensions
+fi
+
+gnome-extensions enable space-bar@luchrioh
