@@ -31,6 +31,11 @@
               fzf
               eza
               bat
+              (nerdfonts.override {
+                fonts = [
+                  "JetBrainsMono"
+                ];
+              })
             ];
           };
         };
