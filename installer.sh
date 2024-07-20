@@ -48,6 +48,14 @@ fi
 gnome-extensions enable space-bar@luchrioh
 gnome-extensions enable tactile@lundal.io
 
+gsettings set org.gnome.shell.extensions.tactile col-0 1
+gsettings set org.gnome.shell.extensions.tactile col-1 2
+gsettings set org.gnome.shell.extensions.tactile col-2 1
+gsettings set org.gnome.shell.extensions.tactile col-3 0
+gsettings set org.gnome.shell.extensions.tactile row-0 1
+gsettings set org.gnome.shell.extensions.tactile row-1 1
+gsettings set org.gnome.shell.extensions.tactile gap-size 32
+
 if ! command -v spotify &> /dev/null; then
 	snap install spotify
 fi
