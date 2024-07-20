@@ -55,3 +55,12 @@ fi
 if ! command -v ulauncher &> /dev/null; then
 	sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher
 fi
+
+SCRIPT_DIR="$(pwd)"
+SCRIPT_NAME="battery-limiter.sh"
+SCRIPT_PATH="$SCRIPT_DIR/$SCRIPT_NAME"
+CRON_JOB="@reboot sudo $SCRIPT_PATH"
+
+if ! crontab -l | grep -q "$SCRIPT_PATH"; then
+  (crontab -l ; echo "$CRON_JOB") | crontab -
+fi
