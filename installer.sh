@@ -1,9 +1,5 @@
 #!/bin/env bash
 
-if ! command -v nix &> /dev/null; then
-	sh <(curl -L https://nixos.org/nix/install) --daemon
-fi
-
 if [[ -z $(nix profile list) ]]; then
 	nix profile install .#systemPackages
 else
@@ -13,16 +9,6 @@ fi
 if [[ $SHELL != *"zsh" ]]; then
 	which zsh | sudo tee -a /etc/shells
 	chsh -s "$(which zsh)"
-fi
-
-if [[ "$(readlink ~/.config)" != *"/config-files/.config" ]]; then
-	read -r -p "Do you want to backup your config file (y/n):" BACKUP
-	if [[ $BACKUP == "y" ]]; then
-		mv ~/.config ~/.config.bak
-	else 
-		rm -rf ~/.config 
-		rm -rf ~/.config.bak
-	fi
 fi
 
 stow --adopt config-files -t ~
