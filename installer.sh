@@ -24,7 +24,7 @@ if [[ -z $(git config --global user.name) ]]; then
 		git config --global user.email "$GIT_EMAIL"
 
 		ssh-keygen -t ed25519 -C "$GIT_EMAIL"
-		clip.exe < ~/.ssh/id_ed25519.pub
-		echo "Paste the ssh copied to the clipboard in you GITHUB account"
+		echo "Here is the new ssh key for your GITHUB account"
+		cat ~/.ssh/id_ed25519.pub
 	fi
 fi
