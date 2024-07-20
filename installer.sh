@@ -28,3 +28,7 @@ if [[ -z $(git config --global user.name) ]]; then
 		cat ~/.ssh/id_ed25519.pub
 	fi
 fi
+
+if ! command -v alacritty &> /dev/null; then
+	sudo snap install alacritty --classic
+fi

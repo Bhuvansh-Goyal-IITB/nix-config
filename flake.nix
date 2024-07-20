@@ -31,7 +31,6 @@
               fzf
               eza
               bat
-              alacritty
             ];
           };
         };
