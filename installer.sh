@@ -51,3 +51,7 @@ gnome-extensions enable tactile@lundal.io
 if ! command -v spotify &> /dev/null; then
 	snap install spotify
 fi
+
+if ! command -v ulauncher &> /dev/null; then
+	sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher
+fi

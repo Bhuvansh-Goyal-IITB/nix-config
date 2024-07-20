@@ -1,3 +1,6 @@
+# For limiting battery to 60%
+echo 60 | sudo tee /sys/class/power_supply/BAT1/charge_control_end_threshold > /dev/null
+
 # Env Vars
 export ZDOTDIR="$HOME"
 export EDITOR="hx"
