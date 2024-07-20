@@ -1,6 +1,7 @@
 # Env Vars
 export ZDOTDIR="$HOME"
 export EDITOR="hx"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Alias
 alias ls="eza --icons=auto"
