@@ -37,6 +37,7 @@
                 ];
               })
               gnomeExtensions.space-bar
+              gnomeExtensions.tactile
             ];
           };
         };
