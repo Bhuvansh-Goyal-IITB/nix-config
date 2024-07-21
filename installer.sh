@@ -46,6 +46,7 @@ if ! command -v gnome-extensions &> /dev/null; then
 fi
 
 gnome-extensions enable tactile@lundal.io
+gnome-extensions enable user-theme@gnome-shell-extensions.gcampax.github.com
 
 if ! command -v spotify &> /dev/null; then
 	snap install spotify

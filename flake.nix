@@ -36,6 +36,8 @@
                   "JetBrainsMono"
                 ];
               })
+              gnome-tweaks
+              gnomeExtensions.user-themes
               gnomeExtensions.tactile
             ];
           };
