@@ -35,7 +35,8 @@
                 fonts = [
                   "FiraCode"
                   "VictorMono"
-                  "Recursive"
+                  "CascadiaCode"
+                  "UbuntuMono"
                   "JetBrainsMono"
                 ];
               })
