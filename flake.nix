@@ -34,6 +34,8 @@
               (nerdfonts.override {
                 fonts = [
                   "FiraCode"
+                  "Mononoki"
+                  "Iosevka"
                   "VictorMono"
                   "CascadiaCode"
                   "UbuntuMono"
