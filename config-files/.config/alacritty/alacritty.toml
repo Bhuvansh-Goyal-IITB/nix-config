@@ -1,11 +1,13 @@
-import = ["~/.config/alacritty/gruvbox-dark.toml"]
+import = ["~/.config/alacritty/gruvbox-material-dark.toml"]
 
 [window]
 padding = { x = 12, y = 12 }
 dynamic_padding = true
 title = "Alacritty"
 startup_mode = "Maximized"
+decorations = "none"
+opacity = 0.97
 
 [font]
-normal = { family = "FiraCode Nerd Font", style = "Regular" }
-size = 18
+normal = { family = "VictorMono Nerd Font", style = "Regular" }
+size = 16
