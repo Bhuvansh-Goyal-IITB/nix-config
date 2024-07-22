@@ -7,5 +7,5 @@ title = "Alacritty"
 startup_mode = "Maximized"
 
 [font]
-normal = { family = "JetBrainsMono NF", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 18
