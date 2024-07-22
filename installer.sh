@@ -54,3 +54,5 @@ fi
 if ! command -v ulauncher &> /dev/null; then
 	sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher
 fi
+
+ln -s ~/.nix-profile/share/fonts/truetype/NerdFonts/* ~/.local/share/fonts/ &> /dev/null
