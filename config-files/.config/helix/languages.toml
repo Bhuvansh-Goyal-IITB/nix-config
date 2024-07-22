@@ -1,4 +1,5 @@
 use-grammars = { only = [
+  "c",
   "lua",
   "python",
   "bash",
