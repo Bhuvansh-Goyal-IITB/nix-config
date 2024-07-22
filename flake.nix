@@ -34,6 +34,8 @@
               (nerdfonts.override {
                 fonts = [
                   "JetBrainsMono"
+                  "FiraCode"
+                  "VictorMono"
                 ];
               })
               gnomeExtensions.tactile
