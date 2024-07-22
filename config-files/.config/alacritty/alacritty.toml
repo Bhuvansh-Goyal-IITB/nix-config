@@ -9,5 +9,5 @@ decorations = "none"
 opacity = 0.97
 
 [font]
-normal = { family = "Mononoki Nerd Font", style = "Regular" }
+normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
 size = 16
