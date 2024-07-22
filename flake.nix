@@ -33,9 +33,9 @@
               bat
               (nerdfonts.override {
                 fonts = [
-                  "JetBrainsMono"
                   "FiraCode"
                   "VictorMono"
+                  "JetBrainsMono"
                 ];
               })
               gnomeExtensions.tactile
