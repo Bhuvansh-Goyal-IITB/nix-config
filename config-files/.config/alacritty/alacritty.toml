@@ -8,5 +8,5 @@ startup_mode = "Maximized"
 opacity = 0.9
 
 [font]
-normal = { family = "Cascadia Code", style = "Regular" }
-size = 16
+normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
+size = 18

@@ -31,10 +31,11 @@
               fzf
               eza
               bat
-              fira-code
-              victor-mono
-              cascadia-code
-              jetbrains-mono
+              (nerdfonts.override {
+                fonts = [
+                  "UbuntuMono"
+                ];
+              })
               gnomeExtensions.tactile
             ];
           };
