@@ -31,17 +31,10 @@
               fzf
               eza
               bat
-              (nerdfonts.override {
-                fonts = [
-                  "FiraCode"
-                  "Mononoki"
-                  "Iosevka"
-                  "VictorMono"
-                  "CascadiaCode"
-                  "UbuntuMono"
-                  "JetBrainsMono"
-                ];
-              })
+              fira-code
+              victor-mono
+              cascadia-code
+              jetbrains-mono
               gnomeExtensions.tactile
             ];
           };

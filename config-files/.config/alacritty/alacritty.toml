@@ -5,9 +5,8 @@ padding = { x = 12, y = 12 }
 dynamic_padding = true
 title = "Alacritty"
 startup_mode = "Maximized"
-decorations = "none"
-opacity = 0.97
+opacity = 0.9
 
 [font]
-normal = { family = "UbuntuMono Nerd Font", style = "Regular" }
+normal = { family = "Cascadia Code", style = "Regular" }
 size = 16
