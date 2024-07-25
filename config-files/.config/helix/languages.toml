@@ -44,6 +44,14 @@ formatter = { command = "clang-format", args = [
   "--style={BasedOnStyle: Google}",
 ] }
 
+[[language]]
+name = "cpp"
+auto-format = true
+formatter = { command = "clang-format", args = [
+  "--style={BasedOnStyle: Google}",
+] }
+
+
 # NIX
 [[language]]
 name = "nix"
