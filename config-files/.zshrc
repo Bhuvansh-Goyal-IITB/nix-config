@@ -20,13 +20,15 @@ autoload -U compinit; compinit
 source "$HOME/.nix-profile/share/fzf-tab/fzf-tab.plugin.zsh"
 
 # Zellij starter script
-ZJ_SESSIONS=$(zellij ls -n -s)
-NUM_SESSIONS=$(zellij ls | wc -l)
+zj() {
+  ZJ_SESSIONS=$(zellij ls -n -s)
+  NUM_SESSIONS=$(zellij ls | wc -l)
 
-if [[ -z "$ZELLIJ" ]]; then
-  if (( NUM_SESSIONS >= 2 )); then
-    zellij attach "$(echo "$ZJ_SESSIONS" | fzf)"
-  else 
-    zellij a -c
+  if [[ -z "$ZELLIJ" ]]; then
+    if (( NUM_SESSIONS >= 2 )); then
+      zellij attach "$(echo "$ZJ_SESSIONS" | fzf)"
+    else
+      zellij a -c
+    fi
   fi
-fi
+}

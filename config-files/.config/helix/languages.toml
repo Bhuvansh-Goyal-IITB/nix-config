@@ -37,6 +37,7 @@ url = "https://json.schemastore.org/package.json"
 fileMatch = ["tsconfig.json"]
 url = "https://json.schemastore.org/tsconfig.json"
 
+# C/C++
 [[language]]
 name = "c"
 auto-format = true
@@ -50,7 +51,6 @@ auto-format = true
 formatter = { command = "clang-format", args = [
   "--style={BasedOnStyle: Google}",
 ] }
-
 
 # NIX
 [[language]]
