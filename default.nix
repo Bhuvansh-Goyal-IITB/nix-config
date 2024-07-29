@@ -1,11 +1,11 @@
 { stdenv
 }: stdenv.mkDerivation {
-  name = "installer";
+  name = "setup";
   src = ./.;
   buildPhase = ''
     		mkdir -p $out/bin
-    		cp ./installer.sh $out/bin/installer 
-    		chmod +x $out/bin/installer
+    		cp ./setup.sh $out/bin/setup 
+    		chmod +x $out/bin/setup
     	'';
   installPhase = '''';
 }
