@@ -1,6 +1,7 @@
 # Env Vars
 export ZDOTDIR="$HOME"
 export EDITOR="hx"
+export BAT_THEME="gruvbox-dark"
 
 # Alias
 alias ls="eza --icons=auto"
