@@ -31,6 +31,7 @@
               fzf
               eza
               bat
+              texliveFull
             ];
           };
         };
