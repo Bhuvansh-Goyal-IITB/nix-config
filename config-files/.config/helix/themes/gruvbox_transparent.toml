@@ -1,4 +1,0 @@
-inherits = "gruvbox"
-
-"ui.background" = {}
-"keyword.directive" = { fg = "red1" }
