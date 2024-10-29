@@ -1,4 +1,4 @@
-theme = "kanagawa_transparent"
+theme = "base16_transparent"
 
 [editor]
 line-number = "relative"
@@ -8,10 +8,6 @@ true-color = true
 
 [editor.file-picker]
 hidden = false
-
-[editor.indent-guides]
-render = true
-skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
