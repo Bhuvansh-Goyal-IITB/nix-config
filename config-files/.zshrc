@@ -1,7 +1,9 @@
 # Env Vars
 export ZDOTDIR="$HOME"
-export EDITOR="hx"
+export EDITOR="nvim"
 export BAT_THEME="gruvbox-dark"
+export BAT_THEME="gruvbox-dark"
+export NVIM_CONFIG="~/.config/nvim/init.lua"
 
 # Alias
 alias ls="eza --icons=auto"

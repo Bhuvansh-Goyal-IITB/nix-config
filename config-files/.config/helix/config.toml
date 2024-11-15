@@ -1,13 +1,10 @@
-theme = "base16_transparent"
+theme = "base16_terminal"
 
 [editor]
 line-number = "relative"
 mouse = false
 auto-format = true
 true-color = true
-
-[editor.file-picker]
-hidden = false
 
 [editor.soft-wrap]
 enable = true

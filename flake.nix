@@ -32,6 +32,7 @@
               eza
               bat
               texliveFull
+              neovim
             ];
           };
         };

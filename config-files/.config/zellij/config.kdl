@@ -212,7 +212,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -260,28 +260,13 @@ pane_frames false
 // For more examples, see: https://github.com/zellij-org/zellij/tree/main/example/themes
 // Once these themes are defined, one of them should to be selected in the "theme" section of this file
 //
-themes {
-    kanagawa {
-        fg 220 215 186
-        bg 31 31 40
-        red 232 36 36
-        green 118 148 106
-        yellow 220 165 97
-        blue 126 156 216
-        magenta 149 127 184
-        orange 255 160 102
-        cyan 106 149 137
-        black 22 22 29
-        white 200 192 147
-    }
-}
 
 // Choose the theme that is specified in the themes section.
 // Default: default
 //
 // theme "default"
 
-theme "kanagawa"
+theme "gruvbox-dark"
 
 // The name of the default layout to load on startup
 // Default: "default"
