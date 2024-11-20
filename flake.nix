@@ -8,32 +8,14 @@
 
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system}; in
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+        systemPackages = import ./system-pkgs.nix { inherit pkgs; };
+      in
       {
         packages = {
           default = pkgs.callPackage ./. { };
-          systemPackages = pkgs.buildEnv {
-            name = "System Packages";
-            paths = with pkgs; [
-              helix
-              direnv
-              nix-direnv
-              nixpkgs-fmt
-              nil
-              zsh
-              zsh-autosuggestions
-              zsh-syntax-highlighting
-              zsh-fzf-tab
-              zellij
-              stow
-              starship
-              zoxide
-              fzf
-              eza
-              bat
-              texliveFull
-            ];
-          };
+          systemPackages = systemPackages;
         };
 
         devShells = {

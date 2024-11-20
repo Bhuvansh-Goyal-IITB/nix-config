@@ -1,10 +1,11 @@
-theme = "base16_terminal"
+theme = "sonokai"
 
 [editor]
 line-number = "relative"
-mouse = false
 auto-format = true
+mouse = false
 true-color = true
+cursorline = true
 
 [editor.soft-wrap]
 enable = true
