@@ -14,18 +14,11 @@ formatter = { command = "clang-format", args = [
 ] }
 
 # TOML
-[[language]]
-name = "toml"
-roots = ["."]
+# [[language]]
+# name = "toml"
+# roots = ["."]
 
 # NIX
 [[language]]
 name = "nix"
-auto-format = true
 formatter = { command = "nixpkgs-fmt" }
-
-# NIX
-[[language]]
-name = "go"
-auto-format = true
-formatter = { command = "gofmt" }

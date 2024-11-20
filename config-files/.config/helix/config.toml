@@ -2,10 +2,10 @@ theme = "sonokai"
 
 [editor]
 line-number = "relative"
-auto-format = true
-mouse = false
 true-color = true
 cursorline = true
+auto-format = true
+mouse = false
 
 [editor.soft-wrap]
 enable = true

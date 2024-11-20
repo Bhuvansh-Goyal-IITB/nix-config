@@ -1,0 +1,9 @@
+general.import = ["./themes/alacritty_0_12.toml"]
+
+[window]
+decorations = "none"
+dynamic_padding = false
+
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+size = 26

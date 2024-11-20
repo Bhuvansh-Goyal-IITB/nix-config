@@ -1,6 +1,7 @@
 { pkgs }: pkgs.buildEnv {
   name = "System Packages";
   paths = with pkgs; [
+    neovim
     helix
     direnv
     nix-direnv
