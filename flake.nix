@@ -10,22 +10,15 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        systemPackages = import ./system-pkgs.nix { inherit pkgs; };
       in
       {
         packages = {
           default = pkgs.callPackage ./. { };
-          systemPackages = systemPackages;
+          systemPackages = pkgs.callPackage ./system-pkgs.nix { inherit pkgs; };
         };
 
         devShells = {
-          default = pkgs.mkShell {
-            buildInputs = with pkgs; [
-              taplo
-              lua-language-server
-              nodePackages_latest.bash-language-server
-            ];
-          };
+          default = pkgs.callPackage ./shell.nix { inherit pkgs; };
         };
       }
     );
