@@ -9,6 +9,8 @@ export NVIM_CONFIG="~/.config/nvim/init.lua"
 alias ls="eza --icons=auto"
 alias rz='source $ZDOTDIR/.zshrc'
 alias ez='$EDITOR $ZDOTDIR/.zshrc'
+alias vim='nvim'
+alias vi='nvim'
 
 # Packages setup
 eval "$(fzf --zsh)"
