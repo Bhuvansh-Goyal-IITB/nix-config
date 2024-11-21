@@ -267,25 +267,22 @@ pane_frames false
 // theme "default"
 
 themes {
-    sonokai {
-        fg 226 226 227       
-        bg 44 46 52          
-        black 24 24 25       
-        red 252 93 124       
-        green 158 208 114    
-        yellow 231 198 100   
-        blue 118 204 224     
-        magenta 179 157 243
-        cyan 141 208 182   
-        white 226 226 227  
-        orange 243 150 96  
-
-        dim_black 40 40 45
-        dim_white 127 132 144
+    gruvbox-material {
+        fg "#ddc7a1"
+        bg "#1d2021"
+        black "#3c3836"
+        red "#ea6962"
+        green "#a9b665"
+        yellow "#d8a657"
+        blue "#7daea3"
+        magenta "#d3869b"
+        cyan "#89b482"
+        white "#d4be98"
+        orange "#e78a4e"
     }
 }
 
-theme "sonokai"
+theme "gruvbox-material"
 
 // The name of the default layout to load on startup
 // Default: "default"

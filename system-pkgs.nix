@@ -18,6 +18,7 @@
     fzf
     eza
     bat
+    ripgrep
     texliveFull
   ];
 }
