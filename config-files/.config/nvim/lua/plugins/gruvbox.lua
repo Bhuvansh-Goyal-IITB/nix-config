@@ -13,6 +13,7 @@ return {
   config = function()
     vim.cmd.colorscheme 'gruvbox-material'
     vim.cmd 'hi FloatBorder guibg=None'
-    vim.cmd 'hi WinSeparator guibg=none'
+    vim.cmd 'hi NormalFloat guibg=None'
+    vim.cmd 'hi WinSeparator guibg=None'
   end,
 }

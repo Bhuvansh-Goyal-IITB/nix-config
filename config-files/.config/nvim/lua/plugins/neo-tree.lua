@@ -8,11 +8,14 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '<leader>et', ':Neotree toggle<CR>', silent = true },
+    { '\\', ':Neotree toggle<CR>', silent = true },
   },
   config = function()
     require('neo-tree').setup {
       popup_border_style = 'rounded',
+      window = {
+        width = 30,
+      },
     }
   end,
 }

@@ -7,24 +7,28 @@ return {
     local lspconfig = require 'lspconfig'
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-    lspconfig.lua_ls.setup {
-      capabilities = capabilities,
-    }
-    lspconfig.gopls.setup {
-      capabilities = capabilities,
-    }
-    lspconfig.clangd.setup {
-      capabilities = capabilities,
-    }
-    lspconfig.taplo.setup {
-      capabilities = capabilities,
-    }
-    lspconfig.nil_ls.setup {
-      capabilities = capabilities,
+    local border = 'rounded'
+
+    local handlers = {
+      ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+      ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
     }
 
+    local lsp_setup = {
+      capabilities = capabilities,
+      handlers = handlers,
+    }
+
+    lspconfig.lua_ls.setup(lsp_setup)
+    lspconfig.gopls.setup(lsp_setup)
+    lspconfig.clangd.setup(lsp_setup)
+    lspconfig.taplo.setup(lsp_setup)
+    lspconfig.nil_ls.setup(lsp_setup)
+
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover)
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
     vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions)
+
     vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
     vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols)
     vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols)

@@ -8,6 +8,7 @@ config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
 
+config.font = wezterm.font("FiraCode Nerd Font")
 config.font_size = 18
 
 config.window_padding = {
