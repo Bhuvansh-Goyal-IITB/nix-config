@@ -9,3 +9,5 @@ vim.opt.laststatus = 3
 
 vim.opt.mouse = 'a'
 vim.opt.termguicolors = true
+
+vim.opt.signcolumn = 'yes'
