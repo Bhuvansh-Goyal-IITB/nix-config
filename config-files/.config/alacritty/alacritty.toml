@@ -2,8 +2,8 @@ general.import = ["./themes/gruvbox_material.toml"]
 
 [window]
 decorations = "none"
-dynamic_padding = false
+dynamic_padding = true
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 20
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 22

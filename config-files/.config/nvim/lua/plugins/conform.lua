@@ -11,6 +11,8 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         go = { 'gofmt' },
+        python = { 'ruff_format' },
+        nix = { 'nixpkgs_fmt' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
       },
