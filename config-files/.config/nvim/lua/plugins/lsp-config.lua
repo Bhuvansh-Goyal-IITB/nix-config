@@ -26,6 +26,7 @@ return {
     lspconfig.nil_ls.setup(lsp_setup)
     lspconfig.pyright.setup(lsp_setup)
     lspconfig.texlab.setup(lsp_setup)
+    lspconfig.rust_analyzer.setup(lsp_setup)
 
     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
     vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions)

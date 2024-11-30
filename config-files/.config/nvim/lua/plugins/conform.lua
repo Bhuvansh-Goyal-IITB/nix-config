@@ -15,6 +15,7 @@ return {
         nix = { 'nixpkgs_fmt' },
         c = { 'clang-format' },
         cpp = { 'clang-format' },
+        rust = { 'rustfmt' },
       },
       formatters = {
         ['clang-format'] = {

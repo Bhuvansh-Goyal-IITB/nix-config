@@ -19,6 +19,7 @@ return {
         'markdown_inline',
         'vim',
         'vimdoc',
+        'rust',
       },
       sync_install = false,
       highlight = { enable = true },
