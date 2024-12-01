@@ -3,13 +3,16 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
+  keys = {
+    { '<leader>ft', ':NvimTreeToggle<CR>' },
+  },
   init = function()
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
   end,
   config = function()
-    local HEIGHT_RATIO = 0.8 -- You can change this
-    local WIDTH_RATIO = 0.5 -- You can change this too
+    local HEIGHT_RATIO = 0.8
+    local WIDTH_RATIO = 0.5
 
     require('nvim-tree').setup {
       disable_netrw = true,
@@ -43,14 +46,6 @@ return {
           return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
         end,
       },
-      -- filters = {
-      --   custom = { "^.git$" },
-      -- },
-      -- renderer = {
-      --   indent_width = 1,
-      -- },
     }
-
-    vim.keymap.set('n', '\\', ':NvimTreeToggle<CR>', { silent = true })
   end,
 }

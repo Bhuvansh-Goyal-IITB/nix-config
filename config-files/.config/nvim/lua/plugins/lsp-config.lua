@@ -2,9 +2,11 @@ return {
   'neovim/nvim-lspconfig',
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',
+    'SmiteshP/nvim-navbuddy',
   },
   config = function()
     local lspconfig = require 'lspconfig'
+    local navbuddy = require 'nvim-navbuddy'
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     local border = 'rounded'
@@ -14,32 +16,50 @@ return {
       ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
     }
 
-    local lsp_setup = {
+    local default_lsp_setup = {
       capabilities = capabilities,
       handlers = handlers,
+      on_attach = function(client, bufnr)
+        navbuddy.attach(client, bufnr)
+      end,
     }
 
-    lspconfig.lua_ls.setup(lsp_setup)
-    lspconfig.gopls.setup(lsp_setup)
-    lspconfig.clangd.setup(lsp_setup)
-    lspconfig.taplo.setup(lsp_setup)
-    lspconfig.nil_ls.setup(lsp_setup)
-    lspconfig.pyright.setup(lsp_setup)
-    lspconfig.texlab.setup(lsp_setup)
-    lspconfig.rust_analyzer.setup(lsp_setup)
+    local servers = {
+      'pyright',
+      'gopls',
+      'clangd',
+      'taplo',
+      'nil_ls',
+      'rust_analyzer',
+      'lua_ls',
+      'texlab',
+    }
 
-    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references)
-    vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions)
+    -- use this for specific setups
+    local server_setup = {}
 
-    vim.keymap.set('n', 'D', vim.diagnostic.open_float)
+    for _, server in ipairs(servers) do
+      lspconfig[server].setup(server_setup[server] or default_lsp_setup)
+    end
 
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
-    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+    vim.api.nvim_create_autocmd('LspAttach', {
+      group = vim.api.nvim_create_augroup('bhuvansh-lsp-attach', { clear = true }),
+      callback = function(event)
+        local map = function(keys, func, mode)
+          mode = mode or 'n'
+          vim.keymap.set(mode, keys, func, { buffer = event.buf })
+        end
 
-    vim.keymap.set('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols)
-    vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
-    vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics)
-
+        map('gr', require('telescope.builtin').lsp_references)
+        map('gd', require('telescope.builtin').lsp_definitions)
+        map('D', vim.diagnostic.open_float)
+        map('<leader>rn', vim.lsp.buf.rename)
+        map('<leader>ca', vim.lsp.buf.code_action)
+        map('<leader>ds', require('telescope.builtin').lsp_document_symbols)
+        map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols)
+        map('<leader>sd', require('telescope.builtin').diagnostics)
+      end,
+    })
     vim.diagnostic.config {
       float = { border = border },
     }

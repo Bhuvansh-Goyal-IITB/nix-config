@@ -41,14 +41,8 @@ config.enable_tab_bar = false
 
 config.window_decorations = "RESIZE"
 
--- config.font = wezterm.font("Hack Nerd Font")
--- config.font_size = 14
-
--- config.font = wezterm.font("MesloLGM Nerd Font")
--- config.font_size = 16
-
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
--- config.font_size = 20
+config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 20
 
 -- config.font = wezterm.font("IosevkaTerm Nerd Font")
 -- config.font_size = 16
@@ -56,8 +50,8 @@ config.window_decorations = "RESIZE"
 -- config.font = wezterm.font("FiraCode Nerd Font")
 -- config.font_size = 16
 
-config.font = wezterm.font("Liga SFMono Nerd Font")
-config.font_size = 18
+-- config.font = wezterm.font("Liga SFMono Nerd Font")
+-- config.font_size = 18
 
 config.front_end = "OpenGL"
 config.enable_kitty_keyboard = true
