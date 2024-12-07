@@ -1,0 +1,70 @@
+(defsrc
+	esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+	lft down up right
+)
+
+(defvar
+	n f24
+  tap-time 200
+  hold-time 220
+)
+
+(defalias
+  s (tap-hold $tap-time $hold-time s lmet)
+  d (tap-hold $tap-time $hold-time d lalt)
+  f (tap-hold $tap-time $hold-time f lctl)
+  j (tap-hold $tap-time $hold-time j rctl)
+	k (tap-hold $tap-time $hold-time k ralt)
+  l (tap-hold $tap-time $hold-time l rmet)
+
+	lr (layer-while-held lr)
+	ll (layer-while-held ll)
+	lt (layer-while-held lt)
+)
+
+(deflayer lb
+  $n   $n   $n   $n   $n   $n   $n   $n   $n   $n   $n   $n    $n    $n      
+	$n   q    w    e    r    t    $n   y    u    i    o    p     $n    $n
+	$n   a   @s 	@d   @f    g    $n   h   @j   @k   @l    ret   $n    $n
+	$n   z    x		 c    v    b    $n   n    m    ,    .    bspc  $n  
+	$n   $n   $n   @ll  lsft $n   spc  @lr	$n   $n   $n   $n 
+	$n   $n   $n   $n   $n   $n   $n 
+	$n   $n   $n   $n     
+)
+
+(deflayer lr
+	$n   $n   $n   $n   $n   $n    $n   $n   $n    $n     $n   $n    $n    $n 
+	$n   del  S-2  S-3  apo  S-apo $n   S-6  S-7   S-8    `    S-`   $n    $n
+	$n   tab  S-4	 [    S-[  S-9   $n   /    +     -      S-;  ;     $n    $n
+	$n   S-1  S-5	 ]    S-]  S-0   $n   \    =     S-min  S-\  S-/   $n  
+	$n   $n   $n   @lt  esc  $n    _    _  	 $n    $n     $n   $n 
+	$n   $n   $n   $n   $n   $n    $n 
+	$n   $n   $n   $n     
+)
+
+(deflayer ll
+  $n   $n   $n   $n     $n   $n   $n   $n   $n   $n   $n   $n    $n    $n      
+	$n   del  lsft pp     prev next $n   0    1    2    3    lalt  $n    $n
+	$n   tab  mute voldwn volu home $n   pgup 4    5    6    ret   $n    $n
+	$n   esc  lmet brdwn  bru  end  $n   pgdn 7    8    9    bspc  $n  
+	$n   $n   $n   _      _    $n   spc  @lt	$n   $n   $n   $n 
+	$n   $n   $n   $n     $n   $n   $n 
+	$n   $n   $n   $n     
+)
+
+(deflayer lt
+  $n   $n   $n   $n     $n   $n   $n   $n   $n   $n   $n   $n    $n    $n      
+	$n   _    f1   f2     f3   f4   $n   $n   lsft $n   $n   _     $n    $n
+	$n   _    f5   f6     f7   f8   $n   lft  down up   rght _     $n    $n
+	$n   lmet f9   f10    f11  f12  $n   $n   $n   $n   $n   _     $n  
+	$n   $n   $n   _      _    $n   _    _	  $n   $n   $n   $n 
+	$n   $n   $n   $n     $n   $n   $n 
+	$n   $n   $n   $n     
+)
+
+

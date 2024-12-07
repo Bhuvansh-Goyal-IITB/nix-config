@@ -5,5 +5,8 @@ decorations = "none"
 dynamic_padding = true
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+normal = { family = "Liga SFMono Nerd Font", style = "Regular" }
 size = 22
+
+[keyboard]
+bindings = [{ key = "N", mods = "Control|Shift", action = "ToggleFullscreen" }]
