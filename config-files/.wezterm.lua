@@ -51,10 +51,13 @@ config.window_decorations = "RESIZE"
 -- config.font_size = 16
 
 -- config.font = wezterm.font("FiraCode Nerd Font")
--- config.font_size = 24
+-- config.font_size = 16
 
 -- config.font = wezterm.font("Liga SFMono Nerd Font")
--- config.font_size = 27
+-- config.font_size = 22
+
+-- config.font = wezterm.font("Hack Nerd Font")
+-- config.font_size = 20
 
 config.font = wezterm.font("MesloLGM Nerd Font")
 config.font_size = 24
